@@ -1,0 +1,16 @@
+{
+  "name": "xinmo/rpc",
+  "description": "远程过程调用",
+  "keywords": [
+  ],
+  "require": {
+    "php": ">=7.2"
+  },
+  "minimum-stability": "stable",
+  "autoload": {
+    "files": [],
+    "psr-4": {
+      "XinMo\\RPC\\": "src"
+    }
+  }
+}
