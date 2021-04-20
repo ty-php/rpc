@@ -4,7 +4,7 @@ namespace XinMo\RPC;
 
 interface IRPCService
 {
-    public function index(array $params):array;
+    public function index(array $params);
 
     public function insert(array $params);
 

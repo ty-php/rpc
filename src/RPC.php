@@ -10,14 +10,14 @@ class RPC extends RESTful
     private $params;
 
     public function __construct(
-        string $service
+        $service
     ) {
         $this->service = $service;
     }
 
     public function request(
-        string $uri,
-        string $method = RPCConst::HTTP_METHOD_GET,
+        $uri,
+        $method = RPCConst::HTTP_METHOD_GET,
         $params = []
     ) {
         $this->uri    = $uri;
@@ -90,12 +90,12 @@ class RPC extends RESTful
         return call_user_func_array([$obj, $func], [$this->params]);
     }
 
-    protected function nameReplace($name): string
+    protected function nameReplace($name)
     {
         return str_replace('_', '', ucwords($name, '_'));
     }
 
-    protected function str(): string
+    protected function str()
     {
         if ($this->method == 'GET') {
             $func = 'index';
@@ -110,7 +110,7 @@ class RPC extends RESTful
         return $func;
     }
 
-    protected function str_123(): string
+    protected function str_123()
     {
         if ($this->method == 'GET') {
             $func = 'view';
@@ -125,7 +125,7 @@ class RPC extends RESTful
         return $func;
     }
 
-    protected function str_str(): string
+    protected function str_str()
     {
         if ($this->method == 'GET') {
             $func = 'index';
@@ -136,7 +136,7 @@ class RPC extends RESTful
         return $func;
     }
 
-    protected function str_str_str($func): string
+    protected function str_str_str($func)
     {
         if ($this->method == 'GET') {
             $func = 'index';
@@ -149,7 +149,7 @@ class RPC extends RESTful
         return $func;
     }
 
-    protected function str_str_123(): string
+    protected function str_str_123()
     {
         if ($this->method == 'GET') {
             $func = 'view';
