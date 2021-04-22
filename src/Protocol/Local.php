@@ -47,7 +47,7 @@ class Local extends RESTful
             $func  = $this->str();
         } elseif (preg_match("/^$str_123_str_123$/", $this->uri)) {
             list($dir, $ids[], $dir2, $ids[]) = explode('/', $this->uri);
-            $class = $this->service . '\\' . ucwords($dir) . '\\' . ucwords($dir2);
+            $class = $this->service . '\\' . ucwords($dir) . '\\' . ucwords($dir2) . '\\Index';
             $func  = $this->str_123();
         } elseif (preg_match("/^$str_123_str_str$/", $this->uri)) {
             list($dir, $ids[], $dir2, $file) = explode('/', $this->uri);
