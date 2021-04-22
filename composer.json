@@ -5,7 +5,7 @@
   ],
   "require": {
     "php": ">=7.2",
-    "guzzlehttp/guzzle": "7.3.0"
+    "guzzlehttp/guzzle": "6.5.5"
   },
   "minimum-stability": "stable",
   "autoload": {
