@@ -86,6 +86,8 @@ class RPC extends RESTful
         $class = $this->nameReplace($class);
 
         $obj = new $class(...$ids);
+        //        var_dump($obj, $func);
+        //        exit;
 
         return call_user_func_array([$obj, $func], [$this->params]);
     }
@@ -138,15 +140,7 @@ class RPC extends RESTful
 
     protected function str_str_str($func)
     {
-        if ($this->method == 'GET') {
-            $func = 'index';
-        } elseif ($this->method == 'POST') {
-            $func = 'index';
-        } else {
-
-        }
-
-        return $func;
+        return lcfirst($this->nameReplace($func));
     }
 
     protected function str_str_123()
