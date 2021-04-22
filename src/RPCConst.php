@@ -13,4 +13,5 @@ class RPCConst
     const RPC_PROTOCOL_REST      = 'rest';
     const RPC_PROTOCOL_TCP       = 'tcp';
     const RPC_PROTOCOL_WEBSOCKET = 'websocket';
+    const RPC_PROTOCOL_LOCAL     = 'local';
 }
