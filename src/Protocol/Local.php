@@ -67,7 +67,6 @@ class Local extends RESTful
         $obj = new $class(...$ids);
         //        var_dump($obj, $func);
         //        exit;
-
         return call_user_func_array([$obj, $func], [$this->params]);
     }
 

@@ -19,7 +19,7 @@ abstract class RESTful implements IRESTful
         $this->uri    = $uri;
         $this->method = $method;
         $this->params = $params;
-        $this->execute();
+        return $this->execute();
     }
 
     abstract protected function execute();

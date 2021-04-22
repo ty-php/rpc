@@ -12,9 +12,8 @@ class REST extends RESTful
             $url = 'http://search.local.com/' . trim($this->uri, '/');
         }
         $client   = new \GuzzleHttp\Client();
-        $response = $client->request($this->method, $url, $this->params);
+        $response = $client->request($this->method, $url, ['form_params' => $this->params]);
 
-        //var_dump($response->getStatusCode(),$response->getBody()->getContents());exit;
         return $response->getBody()->getContents();
     }
 }

@@ -29,12 +29,12 @@ class RPC implements IRESTful
         $this->uri    = $uri;
         $this->method = $method;
         $this->params = $params;
-
         if ($this->protocol == RPCConst::RPC_PROTOCOL_REST) {
             $protocol = (new REST($this->service));
         } else {
             $protocol = (new Local($this->service));
         }
-        $protocol->request($this->uri, $this->method, $this->params);
+
+        return $protocol->request($this->uri, $this->method, $this->params);
     }
 }
