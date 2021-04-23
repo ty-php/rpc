@@ -5,7 +5,7 @@
   ],
   "require": {
     "php": ">=7.2",
-    "guzzlehttp/guzzle": "^6.3",
+    "guzzlehttp/guzzle": "^6.3"
   },
   "minimum-stability": "stable",
   "autoload": {
