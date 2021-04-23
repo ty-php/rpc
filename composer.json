@@ -14,5 +14,11 @@
     "psr-4": {
       "XinMo\\RPC\\": "src"
     }
+  },
+  "repositories": {
+    "xinmo/rpc": {
+      "type": "git",
+      "url": "git@git.dev.moqing.com:php-packagist/rpc.git"
+    }
   }
 }
