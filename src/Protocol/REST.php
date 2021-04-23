@@ -9,8 +9,16 @@ class REST extends RESTful
     protected function execute()
     {
         if ($this->service == 'XinMo\Search') {
-//            $url = 'http://search.local.com/' . trim($this->uri, '/');
-            $url = 'http://search.damowang.com/' . trim($this->uri, '/');/////qwl
+            switch (\XinMo\Config\Env::getName()) {
+                case "dev":
+                    $url = 'http://search.local.com/' . trim($this->uri, '/');
+                    break;
+                case "test":
+                    $url = 'http://search.damowang.com/' . trim($this->uri, '/');/////qwl
+                default:
+                    /////qwl
+                    break;
+            }
         }
         $client   = new \GuzzleHttp\Client();
         $response = $client->request($this->method, $url, ['form_params' => $this->params]);
