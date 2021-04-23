@@ -5,7 +5,8 @@
   ],
   "require": {
     "php": ">=7.2",
-    "guzzlehttp/guzzle": "^6.3"
+    "guzzlehttp/guzzle": "^6.3",
+    "xinmo/config": "0.0.9"
   },
   "minimum-stability": "stable",
   "autoload": {
