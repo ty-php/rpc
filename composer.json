@@ -16,9 +16,9 @@
     }
   },
   "repositories": {
-    "xinmo/rpc": {
+    "xinmo/config": {
       "type": "git",
-      "url": "git@git.dev.moqing.com:php-packagist/rpc.git"
+      "url": "git@git.dev.moqing.com:php-packagist/xm-config.git"
     }
   }
 }
