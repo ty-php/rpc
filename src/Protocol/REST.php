@@ -15,9 +15,9 @@ class REST extends RESTful
                     break;
                 case "test":
                     $url = 'http://search.damowang.com/' . trim($this->uri, '/');/////qwl
-                default:
-                    /////qwl
                     break;
+                default:
+                    $url = 'http://search.weiyanqin.com/' . trim($this->uri, '/');/////qwl
             }
         }
         $client   = new \GuzzleHttp\Client();
