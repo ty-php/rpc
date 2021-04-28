@@ -14,7 +14,8 @@ class REST extends RESTful
                     $url = 'http://search.local.com/' . trim($this->uri, '/');
                     break;
                 case "test":
-                    $url = 'http://search.damowang.com/' . trim($this->uri, '/');
+                    //                    $url = 'http://search.damowang.com/' . trim($this->uri, '/');////qwl
+                    $url = 'http://search.weiyanqing.com/' . trim($this->uri, '/');
                     break;
                 default:
                     $url = 'http://search.weiyanqin.com/' . trim($this->uri, '/');
