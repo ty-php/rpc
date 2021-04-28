@@ -17,7 +17,7 @@ class REST extends RESTful
                     $url = 'http://search.damowang.com/' . trim($this->uri, '/');
                     break;
                 default:
-                    $url = 'http://search.weiyanqin.com/' . trim($this->uri, '/');
+                    $url = 'http://search.weiyanqing.com/' . trim($this->uri, '/');
             }
         }
         $client   = new \GuzzleHttp\Client();
