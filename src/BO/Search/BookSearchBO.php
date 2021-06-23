@@ -35,7 +35,7 @@ class BookSearchBO
         $order = null,
 
         $offset = null,
-        $limit = null,
+        $limit = null
     ) {
         $this->section_id   = $section_id;
         $this->class_ids    = $class_ids;
