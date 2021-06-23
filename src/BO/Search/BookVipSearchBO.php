@@ -8,8 +8,6 @@ namespace XinMo\RPC\BO\Search;
  */
 class BookVipSearchBO extends BookSearchBO
 {
-    protected $is_vip_book;
-
     public function __construct(
         $section_id = null,
         array $class_ids = null,
