@@ -4,15 +4,15 @@ namespace XinMo\RPC;
 
 interface IRPCService
 {
-    public function index(array $params);
+    public function index($params);
 
-    public function insert(array $params);
+    public function insert($params);
 
-    public function view($id);
+    public function view();
 
-    public function update($id);
+    public function update($params);
 
     public function drop();
 
-    public function delete($id);
+    public function delete();
 }
