@@ -19,9 +19,7 @@ class BookVipSearchBO extends BookSearchBO
         $update = null,
         $order = null,
         $offset = null,
-        $limit = null,
-
-        $is_vip_book = null
+        $limit = null
     ) {
         parent::__construct(
             $section_id, $class_id, $subclass_id,
@@ -29,6 +27,6 @@ class BookVipSearchBO extends BookSearchBO
             $free, $book_status, $words, $update, $order,
             $offset, $limit
         );
-        $this->is_vip_book = $is_vip_book;
+        $this->is_vip_book = 1;
     }
 }
