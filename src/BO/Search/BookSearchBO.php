@@ -40,7 +40,7 @@ class BookSearchBO
         $this->section_id   = $section_id;
         $this->class_ids    = $class_ids;
         $this->subclass_ids = $subclass_ids;
-        $this->keyword      = $keyword;
+        $this->keyword      = openccT2S($keyword);//////qwl
         $this->free         = $free;
         $this->book_status  = $book_status;
         $this->words        = $words;
