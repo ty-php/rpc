@@ -6,7 +6,7 @@ namespace XinMo\RPC\BO\Search;
 /**
  * @property-read $section_id
  * @property-read $class_ids
- * @property-read $subclass_ids
+ * @property-read $subclass_id
  *
  * @property-read $keyword
  *
@@ -23,8 +23,8 @@ class BookSearchBO
 {
     public function __construct(
         $section_id = null,
-        array $class_ids = null,
-        array $subclass_ids = null,
+        array $class_id = null,
+        array $subclass_id = null,
 
         $keyword,
 
@@ -38,8 +38,8 @@ class BookSearchBO
         $limit = null
     ) {
         $this->section_id   = $section_id;
-        $this->class_ids    = $class_ids;
-        $this->subclass_ids = $subclass_ids;
+        $this->class_id    = $class_id;
+        $this->subclass_id = $subclass_id;
         $this->keyword      = openccT2S($keyword);//////qwl
         $this->free         = $free;
         $this->book_status  = $book_status;

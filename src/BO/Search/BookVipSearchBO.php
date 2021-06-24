@@ -10,8 +10,8 @@ class BookVipSearchBO extends BookSearchBO
 {
     public function __construct(
         $section_id = null,
-        array $class_ids = null,
-        array $subclass_ids = null,
+        array $class_id = null,
+        array $subclass_id = null,
         $keyword,
         $free = null,
         $book_status = null,
@@ -24,7 +24,7 @@ class BookVipSearchBO extends BookSearchBO
         $is_vip_book = null
     ) {
         parent::__construct(
-            $section_id, $class_ids, $subclass_ids,
+            $section_id, $class_id, $subclass_id,
             $keyword,
             $free, $book_status, $words, $update, $order,
             $offset, $limit
