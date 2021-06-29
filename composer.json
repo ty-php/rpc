@@ -1,5 +1,6 @@
 {
   "name": "xinmo/rpc",
+  "type": "common-plugin",
   "description": "远程过程调用",
   "keywords": [
   ],
