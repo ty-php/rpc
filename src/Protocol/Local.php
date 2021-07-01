@@ -23,7 +23,7 @@ class Local extends RESTful
         $this->uri = trim($this->uri, '/');
         $ids       = [];
         if (preg_match("/^$str$/", $this->uri)) {
-            $class = $this->service . '\\' . $this->uri . '\\Index';
+            $class = $this->service . '\\' . ucwords($this->uri) . '\\Index';
             $func  = $this->str();
         } elseif (preg_match("/^$str_123$/", $this->uri)) {
             list($dir, $ids[]) = explode('/', $this->uri);
