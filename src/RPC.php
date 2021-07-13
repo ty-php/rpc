@@ -46,6 +46,21 @@ class RPC implements IRESTful
         return $this->request($uri, RPCConst::HTTP_METHOD_GET, $params);
     }
 
+    public function post($uri, $params = [])
+    {
+        return $this->request($uri, RPCConst::HTTP_METHOD_POST, $params);
+    }
+
+    public function put($uri, $params = [])
+    {
+        return $this->request($uri, RPCConst::HTTP_METHOD_PUT, $params);
+    }
+
+    public function delete($uri, $params = [])
+    {
+        return $this->request($uri, RPCConst::HTTP_METHOD_DELETE, $params);
+    }
+
     public static function __callStatic($name, $arguments)
     {
         return self::server($service = 'XinMo\\' . $name, ...$arguments);
