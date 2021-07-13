@@ -22,7 +22,7 @@ class RPC implements IRESTful
         $this->protocol = $protocol;
     }
 
-    public static function server($service, $protocol = RPCConst::RPC_PROTOCOL_LOCAL)
+    public static function server($service, $protocol = RPCConst::RPC_PROTOCOL_LOCAL): RPC
     {
         return new self($service, $protocol);
     }
