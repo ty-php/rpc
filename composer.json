@@ -6,7 +6,7 @@
   ],
   "require": {
     "php": ">=5.6",
-    "xinmo/config": "^0.1.02",
+    "xinmo/config": ">=0.1.02",
     "xinmo/service-plugin": "^1.0.0"
   },
   "minimum-stability": "stable",
