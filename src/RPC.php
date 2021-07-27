@@ -5,6 +5,9 @@ namespace XinMo\RPC;
 use XinMo\RPC\Protocol\Local;
 use XinMo\RPC\Protocol\REST;
 
+/**
+ * @method static $this User($protocol = RPCConst::RPC_PROTOCOL_LOCAL) \XinMo\User\UserServer
+ */
 class RPC implements IRESTful
 {
     private $service;
@@ -13,19 +16,19 @@ class RPC implements IRESTful
     private $params;
     private $protocol;
 
-    public function __construct(
-        $service,
-        $protocol = RPCConst::RPC_PROTOCOL_LOCAL
-    ) {
+    public function __construct($service, $protocol = RPCConst::RPC_PROTOCOL_LOCAL)
+    {
         $this->service  = $service;
         $this->protocol = $protocol;
     }
 
-    public function request(
-        $uri,
-        $method = RPCConst::HTTP_METHOD_GET,
-        $params = []
-    ) {
+    public static function server($service, $protocol = RPCConst::RPC_PROTOCOL_LOCAL): RPC
+    {
+        return new self($service, $protocol);
+    }
+
+    public function request($uri, $method = RPCConst::HTTP_METHOD_GET, $params = [])
+    {
         $this->uri    = $uri;
         $this->method = $method;
         $this->params = $params;
@@ -36,5 +39,30 @@ class RPC implements IRESTful
         }
 
         return $protocol->request($this->uri, $this->method, $this->params);
+    }
+
+    public function get($uri, $params = [])
+    {
+        return $this->request($uri, RPCConst::HTTP_METHOD_GET, $params);
+    }
+
+    public function post($uri, $params = [])
+    {
+        return $this->request($uri, RPCConst::HTTP_METHOD_POST, $params);
+    }
+
+    public function put($uri, $params = [])
+    {
+        return $this->request($uri, RPCConst::HTTP_METHOD_PUT, $params);
+    }
+
+    public function delete($uri, $params = [])
+    {
+        return $this->request($uri, RPCConst::HTTP_METHOD_DELETE, $params);
+    }
+
+    public static function __callStatic($name, $arguments)
+    {
+        return self::server($service = 'XinMo\\' . $name, ...$arguments);
     }
 }

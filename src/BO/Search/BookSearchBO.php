@@ -49,13 +49,8 @@ class BookSearchBO
         $this->offset       = $offset ? $offset : 0;
         $this->limit        = $limit ? $limit : 10;
 
-        //如果搜索的是免费的，那么默认一些搜索条件  15天内的，按字数desc
-        if ($this->free && $this->free == 1) {
-            if ($this->section_id == 2) {
-                $this->words = 5;//大于30万字
-            } else {
-                $this->update = 3;//15日内更新
-            }
+        if ($this->free == 1) {
+            $this->words = 6;//大于1万字
             $this->order = 7;
         }
     }
