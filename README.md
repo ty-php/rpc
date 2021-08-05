@@ -9,7 +9,6 @@ RPC::User()->request();
 
 创建搜索服务对象：
 (new RPC('XinMo\Search'))->request($uri, 'GET', $bo);
-
 3、RPC现有目录介绍
 BO：请求微服务方法时，需要传递的参数对象；
 Exception：统一异常处理；
