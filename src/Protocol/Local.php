@@ -83,6 +83,8 @@ class Local extends RESTful
             $func = 'insert';
         } elseif ($this->method == 'DELETE') {
             $func = 'drop';
+        }  elseif ($this->method == 'PUT') {
+            $func = 'update';
         } else {
 
         }
