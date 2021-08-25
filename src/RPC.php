@@ -17,7 +17,7 @@ class RPC implements IRESTful
     private $params;
     private $protocol;
 
-    public function __construct($service, $siteId, $protocol = RPCConst::RPC_PROTOCOL_LOCAL)
+    public function __construct($service, $siteId=0, $protocol = RPCConst::RPC_PROTOCOL_LOCAL)
     {
         $this->service  = $service;
         $this->siteId   = $siteId;
