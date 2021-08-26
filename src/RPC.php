@@ -33,7 +33,8 @@ class RPC implements IRESTful
     {
         $this->uri    = $uri;
         $this->method = $method;
-        $this->params = $params + ['siteId' => $this->siteId];
+
+        $this->params = is_array($params)?$params + ['siteId' => $this->siteId]:$params;
         if ($this->protocol == RPCConst::RPC_PROTOCOL_REST) {
             $protocol = (new REST($this->service));
         } else {
