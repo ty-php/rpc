@@ -2,6 +2,10 @@
 
 namespace XinMo\RPC;
 
+/**
+ * Interface IRPCService
+ * rpc服务实现此接口
+ */
 interface IRPCService
 {
     public function index($params);

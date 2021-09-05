@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace XinMo\RPC\BO\Search;
 
 /**
+ * 获取勋章书籍参数对象
  * @property-read $medal
  * @property-read $offset
  * @property-read $limit

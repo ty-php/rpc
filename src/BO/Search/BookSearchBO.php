@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace XinMo\RPC\BO\Search;
 
 /**
+ * 书籍搜索参数对象
  * @property-read $section_id
  * @property-read $class_ids
  * @property-read $subclass_id

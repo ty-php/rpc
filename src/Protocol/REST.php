@@ -4,6 +4,9 @@ namespace XinMo\RPC\Protocol;
 
 use XinMo\RPC\RESTful;
 
+/**
+ * RESTFUL http 调用类
+ */
 class REST extends RESTful
 {
     protected function execute()

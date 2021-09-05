@@ -6,6 +6,7 @@ use XinMo\RPC\Protocol\Local;
 use XinMo\RPC\Protocol\REST;
 
 /**
+ * rpc入口
  * @method static $this Recommend($siteId, $protocol = RPCConst::RPC_PROTOCOL_LOCAL)
  */
 class RPC implements IRESTful

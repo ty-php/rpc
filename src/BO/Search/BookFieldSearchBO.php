@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace XinMo\RPC\BO\Search;
 
 /**
+ * 单字段搜索 参数对象
  * @property-read $section_id
  *
  * @property-read $keyword

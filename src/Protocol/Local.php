@@ -4,6 +4,9 @@ namespace XinMo\RPC\Protocol;
 
 use XinMo\RPC\RESTful;
 
+/**
+ * 本地调用类
+ */
 class Local extends RESTful
 {
     public function execute()
@@ -75,6 +78,10 @@ class Local extends RESTful
         return str_replace('_', '', ucwords($name, '_'));
     }
 
+    /**
+     * 路由规则：/str method对应方法名
+     * @return string
+     */
     protected function str()
     {
         if ($this->method == 'GET') {
@@ -92,6 +99,10 @@ class Local extends RESTful
         return $func;
     }
 
+    /**
+     * 路由规则：/str/123 method对应方法名
+     * @return string
+     */
     protected function str_123()
     {
         if ($this->method == 'GET') {
@@ -107,6 +118,10 @@ class Local extends RESTful
         return $func;
     }
 
+    /**
+     * 路由规则：/str/str method对应方法名
+     * @return string
+     */
     protected function str_str()
     {
         if ($this->method == 'GET') {
@@ -118,11 +133,19 @@ class Local extends RESTful
         return $func;
     }
 
+    /**
+     * 路由规则：/str/str/str method对应方法名
+     * @return string
+     */
     protected function str_str_str($func)
     {
         return lcfirst($this->nameReplace($func));
     }
 
+    /**
+     * 路由规则：/str/str/123 method对应方法名
+     * @return string
+     */
     protected function str_str_123()
     {
         if ($this->method == 'GET') {

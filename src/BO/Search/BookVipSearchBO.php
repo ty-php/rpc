@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace XinMo\RPC\BO\Search;
 
 /**
+ * 搜索vip书籍参数对象
  * @property-read $is_vip_book
  */
 class BookVipSearchBO extends BookSearchBO
