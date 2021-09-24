@@ -14,11 +14,5 @@
         "psr-4": {
             "TyPHP\\RPC\\": "src"
         }
-    },
-    "repositories": {
-        "service-plugin": {
-            "type": "vcs",
-            "url": "git@git.dev.moqing.com:php-packagist/service-plugin.git"
-        }
     }
 }
