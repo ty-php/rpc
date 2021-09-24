@@ -1,6 +1,6 @@
 <?php
 
-namespace XinMo\RPC;
+namespace TyPHP\RPC;
 
 class RPCConst
 {

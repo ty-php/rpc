@@ -1,9 +1,9 @@
 <?php
 
-namespace XinMo\RPC;
+namespace TyPHP\RPC;
 
-use XinMo\RPC\Protocol\Local;
-use XinMo\RPC\Protocol\REST;
+use TyPHP\RPC\Protocol\Local;
+use TyPHP\RPC\Protocol\REST;
 
 /**
  * rpc入口
@@ -67,6 +67,6 @@ class RPC implements IRESTful
 
     public static function __callStatic($name, $arguments)
     {
-        return self::server($service = 'XinMo\\' . $name, ...$arguments);
+        return self::server($service = 'TyPHP\\' . $name, ...$arguments);
     }
 }

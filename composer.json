@@ -1,29 +1,24 @@
 {
-  "name": "xinmo/rpc",
-  "type": "common-plugin",
-  "description": "远程过程调用",
-  "keywords": [
-  ],
-  "require": {
-    "php": ">=5.6",
-    "xinmo/config": ">=0.1.02",
-    "xinmo/service-plugin": "^1.0.0"
-  },
-  "minimum-stability": "stable",
-  "autoload": {
-    "files": [],
-    "psr-4": {
-      "XinMo\\RPC\\": "src"
-    }
-  },
-  "repositories": {
-    "xinmo/config": {
-      "type": "git",
-      "url": "git@git.dev.moqing.com:php-packagist/xm-config.git"
+    "name": "typhp/rpc",
+    "type": "common-plugin",
+    "description": "远程过程调用",
+    "keywords": [
+    ],
+    "require": {
+        "php": ">=5.5",
+        "TyPHP/service-plugin": "^1.0.0"
     },
-    "service-plugin": {
-      "type": "vcs",
-      "url": "git@git.dev.moqing.com:php-packagist/service-plugin.git"
+    "minimum-stability": "stable",
+    "autoload": {
+        "files": [],
+        "psr-4": {
+            "TyPHP\\RPC\\": "src"
+        }
+    },
+    "repositories": {
+        "service-plugin": {
+            "type": "vcs",
+            "url": "git@git.dev.moqing.com:php-packagist/service-plugin.git"
+        }
     }
-  }
 }

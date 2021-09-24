@@ -1,8 +1,8 @@
 <?php
 
-namespace XinMo\RPC\Protocol;
+namespace TyPHP\RPC\Protocol;
 
-use XinMo\RPC\RESTful;
+use TyPHP\RPC\RESTful;
 
 /**
  * 本地调用类

@@ -1,8 +1,8 @@
 <?php
 
-namespace XinMo\RPC\Protocol;
+namespace TyPHP\RPC\Protocol;
 
-use XinMo\RPC\RESTful;
+use TyPHP\RPC\RESTful;
 
 /**
  * RESTFUL http 调用类
@@ -11,8 +11,8 @@ class REST extends RESTful
 {
     protected function execute()
     {
-        if ($this->service == 'XinMo\Search') {
-            switch (\XinMo\Config\Env::getName()) {
+        if ($this->service == 'TyPHP\Search') {
+            switch (\TyPHP\Config\Env::getName()) {
                 case "dev":
                     $url = 'http://search.local.com/' . trim($this->uri, '/');
                     break;

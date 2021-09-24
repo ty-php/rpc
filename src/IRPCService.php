@@ -1,22 +1,18 @@
 <?php
 
-namespace XinMo\RPC;
+namespace TyPHP\RPC;
 
-/**
- * Interface IRPCService
- * rpc服务实现此接口
- */
 interface IRPCService
 {
     public function index($params);
 
     public function insert($params);
 
-    public function view();
+    public function view($params);
 
     public function update($params);
 
-    public function drop();
+    public function drop($params);
 
-    public function delete();
+    public function delete($params);
 }
