@@ -6,7 +6,7 @@
     ],
     "require": {
         "php": ">=5.5",
-        "TyPHP/service-plugin": "^1.0.0"
+        "ty-php/local-service-plugin": "^1.0.0"
     },
     "minimum-stability": "stable",
     "autoload": {
